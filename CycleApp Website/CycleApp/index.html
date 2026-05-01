@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--Setup-->
+	<meta charset="utf-8"/>
+	<meta name="keywords" content="cycling, cycle, statistic tracker">
+    <title>CycleApp | Home</title>
+	<!--External Links to Files-->
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+    <div id="body-container">
+
+        <header>
+            <img src="img/banner.jpg" alt="CycleApp Banner">
+            <h2>Username</h2>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Trips</a></li>
+                <li><a href="index.html">Goals</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="button">
+                <button type="button">Start Ride</button>
+            </div>
+            <div class="overall-statistics">Overall Statistic</div>
+            <div class="overall-statistics">Overall Statistic</div>
+            <div class="overall-statistics">Overall Statistic</div>
+            <div class="overall-statistics">Overall Statistic</div>
+            <div id="latest-rides">
+                <h3>Latest Rides</h3>
+                <div id="ride-list"></div>
+            </div>
+        </main>
+
+    </div>
+    <script src="js/model.js"></script>
+    <script src='js/view.js'></script>
+    <script>
+    // <<Controller>>
+        function main () {
+            let theUser = new User()
+            theUser.addTrip(1, 'Trip 1', 'Cashmere')
+            theUser.addTrip(2, 'Trip 2', 'Sydenham')
+            theUser.addTrip(3, 'Trip 3', 'CBD')
+            theUser.addGoal(1, 'Goal 1', 'duration', 10.00, 'Hi')
+            theUser.addGoal(2, 'Goal 2', 'distance', 100.00, 'Hello')
+            theUser.addGoal(3, 'Goal 3', 'calories', 50.00, 'Hey there')
+            View.clr()
+            View.out(theUser)
+        }
+
+        window.onload = main
+
+    </script>
+</body>
+</html>
