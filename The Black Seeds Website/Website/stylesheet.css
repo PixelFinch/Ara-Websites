@@ -1,0 +1,684 @@
+/* RESETS */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ 
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+html {
+	height: 100%;
+}
+
+/* MEDIUM LAYOUT - Defult. Is one column at 40rem wide. This is for medium sized devices.*/
+
+body {
+	overflow-x: hidden;
+	background-image: url("images/background.jpg");
+	height: 100%;
+}
+
+#body-container {
+    max-width: 40rem;
+    margin: 0 auto;
+	min-height: 100%;
+}
+
+header, nav {
+    padding: 1em;
+}
+
+main {
+	padding-bottom: 8em;
+}
+
+h1 {
+	margin: 0 0 1em 0;
+}
+
+#header-background {
+    margin-top: 1em;
+}
+
+main h1, #content, .caption, #aside, .blog-post, .recording {
+	margin: 1rem;
+}
+
+#contact-us br {
+	margin: 0.4em 0;
+}
+
+#title-large1, #title-large2 {
+	display: none;
+}
+
+footer {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	max-width: inherit;
+	bottom: 0;
+}
+
+footer ul {
+	padding: 0.5em;
+}
+
+/* Media */
+
+audio, video {
+	width: 100%;
+}
+
+
+/* Blog Entries */
+
+.blog-post, .recording{
+	grid-column: 1 / 3;
+	padding: 1em;
+}
+
+.small-image {
+	margin-left: 1em;
+}
+
+/* Mobile Nav */
+
+nav {
+	display: none;
+}
+
+.bpen-drawer{
+  position:fixed;
+  top: 0px;
+  height: 100%;
+  width: 225px;
+  background-color: #414141;
+  z-index:1000;
+  transition: 0.5s ease;
+}
+
+.bpen-drawer-left{
+  left:-225px;
+  border-right: 2px solid #414141;
+}
+
+.bpen-drawer-right{
+  right:-225px;
+  border-left: 2px solid #414141;
+}
+
+.bpen-drawer-left.expanded{
+  left: 0px;
+}
+
+.bpen-drawer-right.expanded{
+  right:0px;
+}
+
+.bpen-toggle-pad {
+  position:absolute;
+  top: 0px;
+  width: 25px;
+  height:100%;
+  background-color:#fff;
+  color:#000;
+  text-align:center;
+  cursor:pointer;
+  background: url(../img/icon-menu.svg) no-repeat center center;
+  background-size: 25px 25px;
+  -webkit-transition: 3s ease;
+  -moz-transition: 3s ease;
+  -o-transition: 3s ease;
+  -ms-transition: 3s ease;
+  transition: 0.5s ease;
+}
+
+.bpen-toggle-pad-left{
+  right: -30px;
+  text-align: center;
+}
+
+.bpen-toggle-pad-right{
+  left : -30px;
+  text-align: center;
+}
+
+.bpen-toggle-pad-left.expanded{
+  right:0px;
+
+}
+
+.bpen-toggle-pad-right.expanded{
+  left:0px;
+}
+
+.bpen-drawer-header{
+  position:relative;
+  height: 40px;
+  width:100%;
+  top:0px;
+  left:0px;
+  background-color: #a36bb5;
+}
+
+.bpen-drawer-items{
+    list-style-type:  none;
+    padding-left: 0px;
+    width:100%;
+    margin-top:0px;
+}
+
+.bpen-drawer-items li{
+  padding: 7px 0px 7px 0px;
+  width:100%;
+  margin: -1px 0px 0px 0px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  cursor:pointer;
+  font-size:1.5em;
+}
+
+.bpen-drawer-items li a{
+  display:block;
+  text-decoration:none;
+  font-weight: bold;
+  color : white;
+  padding-left:10px;
+  width:100%;
+}
+
+/* SUBMIT FORM */
+
+/* Button used to open the submit form on recordings page. Scrolls with page. Edges to edge of viewport */
+
+#submit-button {
+	width: 100%;
+	padding: 1em 0;
+	cursor: pointer;
+}
+
+/* Popup form which is hidden by defult. Fixed postition in viewport. */
+
+.submit-popup {
+	display: none;
+	position: fixed;
+	top: 10em;
+	right: 0;
+    left: 0;
+    margin: 5% auto;
+	z-index: 9;
+}
+
+/* Form container */
+
+#submit-container {
+  width: 100%;
+  padding: 0.8em;
+}
+
+/* Text input fields */
+
+#submit-container input[type=text]{
+  width: 100%;
+  padding: 0.8em;
+  margin: 1em 0 2em 0;
+  border: none;
+}
+
+/* Date input field */
+
+#submit-container input[type=date]{
+  padding: 0.8em;
+  margin: 1em 0 2em 2em;
+  border: none;
+}
+
+/* Buttons */
+
+#submit-container .button {
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 2em;
+  opacity: 0.8;
+}
+
+/* Hover hilight */
+
+#submit-container .button:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* NEWSLETTER FORM */
+
+/* Button used to open the newsletter form in header. Scrolls with page. Edges to edge of viewport */
+
+#newsletter-button {
+	width: 100vw;
+	margin-left: calc(-50vw + 50%);
+	padding: 0.8em 0;
+	cursor: pointer;
+}
+
+/* Popup newsletter form which is hidden by defult. Fixed postition in viewport. */
+
+.newsletter-popup {
+	display: none;
+	position: fixed;
+	right: 0;
+    left: 0;
+    margin: 5% auto;
+	z-index: 9;
+}
+
+/* Form container */
+
+#newsletter-container {
+  width: 100%;
+  padding: 0.8em;
+}
+
+/* Email input field */
+
+#newsletter-container input[type=text]{
+  width: 100%;
+  padding: 0.8em;
+  margin: 1em 0 2em 0;
+  border: none;
+}
+
+/* Buttons */
+
+#newsletter-container .button {
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 2em;
+  opacity: 0.8;
+}
+
+/* Hover hilight */
+
+#newsletter-container .button:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* RESPONSIVENESS */
+
+/* LARGE LAYOUT - Viewport is 58rem wide. Two columns wide */
+
+@media screen and (min-width: 58rem) {
+
+/* Set new width */
+
+#body-container {
+	display: grid;
+	max-width: 58rem;
+	width: 58rem;
+	position: relative;
+	padding-left: 11rem;
+}
+
+#header-background, header{
+    margin-top: 0;
+	padding: 0;
+}
+
+/* Newsletter button reposition */
+
+#newsletter-button {
+	background-image: url(images/gradient.jpg);
+    position: fixed;
+	margin: auto;
+	margin-left: -7.33em;
+	height: 100%;
+	width: 11rem;
+}
+
+/* Replace header image with different one */
+
+#title-small {
+	display: none;
+}
+
+#title-large1 {
+	height: 9em;
+	width: 12em;
+	display: block;
+	position: absolute;
+	margin: 2em 0 0 -12em;
+	z-index: 2;
+}
+
+#title-large2 {
+	display: block;
+	height: 9em;
+	width: 28em;
+	position: absolute;
+	margin: 2em 0 0 0;
+	z-index: 2;
+}
+
+/* Blog Entries */
+
+.blog-content {
+	display: flex;
+}
+
+.small-image {
+	flex-basis: 60%;
+}
+
+/* Switch nav styles from mobile to larger screen */
+
+nav {
+	display: inline;
+}
+
+.bpen-drawer {
+	display: none;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 1em 1.5em;
+}
+
+/* Main grid */
+
+main {
+	display: grid;
+	padding-bottom: 4em;
+}
+
+main h1 {
+	grid-column: 1 / 3;
+}
+    
+#large-image {
+	margin-top: 0;
+}
+
+#aside {
+	grid-column: 1 / 3;
+}
+
+footer ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+}
+
+footer ul li {
+	padding: 0.5em 1em;
+}
+    
+}
+
+/* EXTRA LARGE LAYOUT - Three columns, with 84 width. */
+
+@media screen and (min-width: 84rem) {
+    
+#body-container {
+
+	/* Overrides width set above. */
+
+	max-width: 84rem;
+	width: 84rem;
+	grid-template-columns: 20% 80%;
+}
+
+#header-background {
+	height: 14em;
+}
+
+#title-large1 {
+	margin: 2em 0 0 -12em;
+	z-index: 2;
+}
+
+#title-large2 {
+	margin: 2em 0 0 0;
+	z-index: 2;
+}
+
+header {
+	grid-column: 1 / 3;
+}
+
+nav {
+	grid-column: 1;
+	padding: 3rem;
+}
+
+nav ul {
+	flex-direction: column;
+}
+    
+main {
+	grid-column: 2;
+}
+    
+#content { /*?replace in body*/
+	flex-basis: 50%;
+}
+    
+#large-image {
+	flex-basis: 50%;
+}
+
+footer {
+	grid-column: 1 / 3;
+}
+
+}
+
+/* TYPOGRAPHY */
+
+#newsletter-button, #submit-button{
+	font-size: 1.5em;
+}
+
+body,  footer a, .bpen-drawer {
+    font-family: "Futura Light", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+nav, h1, h2, #title, .caption {
+    font-family: "Oswald Bold", Impact, sans-serif;
+	font-weight: normal;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+nav {
+    font-size: 1.25rem;
+}
+
+#contact-us h2 {
+	padding: 1em 0;
+}
+
+.title {
+    font-style: italic;
+}
+
+.caption {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.newsletter-popup, .submit-popup{
+    text-align: center;
+}
+
+#newsletter-button, #submit-button {
+    text-align: center;
+}
+
+
+.blog-post .caption {
+	font-size: 1rem;
+}
+
+/* COLOUR SCHEME & BORDERS */
+
+#body-container {
+	background-color: white;
+}
+
+#contact-us a{
+	color: #414141;
+}
+
+/* Submit */
+
+#submit-button {
+	background-color: #a36bb5;
+	color: white;
+	border: none;
+}
+
+#submit-container {
+  background-color: #a36bb5;
+  color: white;
+}
+
+#submit-container input[type=text]{
+  background: white;
+}
+
+#submit-container input[type=text]:focus{
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+#submit-container .button {
+  background-color: #f2a15d;
+  color: white;
+}
+
+#submit-container .cancel {
+  background-color: #414141;
+}
+
+
+/* Newsletter */
+
+#newsletter-button {
+	background-color: #a36bb5;
+	color: white;
+	border: none;
+}
+
+#newsletter-container {
+  background-color: #a36bb5;
+  color: white;
+}
+
+#newsletter-container input[type=text]{
+  background: white;
+}
+
+/* When input field clicked in popup hilight */
+
+#newsletter-container input[type=text]:focus{
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+#newsletter-container .button {
+  background-color: #f2a15d;
+  color: white;
+}
+
+#newsletter-container .cancel {
+  background-color: #414141;
+}
+
+body {
+    color: #414141;
+}
+
+header {
+    background-color: white;
+}
+
+.recording {
+	background-color: #414141;
+}
+
+nav {
+    background-color: white;
+}
+
+nav a {
+    color: #414141;
+}
+
+.blog-post, .blog-post a{
+	color: white;
+	background-color: #414141;
+}
+
+.recording {
+	color: white;
+}
+
+/* Link Hovers */
+
+a:hover, #contact-us a:hover{
+    color: #f2a15d;
+}
+
+.active {
+    color: white;
+	background-color: #414141;
+}
+
+footer {
+    background-color: #414141;
+}
+
+footer a {
+    color: white;
+}
+
+/* LISTS */
+
+nav ul, footer ul {
+    list-style-type: none;
+}
+
+nav a, footer ul a{
+    text-decoration: none;
+}
+
+/* IMAGES */
+
+img {
+    width: 100%;
+}

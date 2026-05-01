@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!--Setup-->
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--SEO-->
+	<meta name="description" content="The Black Seeds fan website owned by Sam Stewart, trying to premote New Zealand Bands.">
+	<meta name="keywords" content="New Zealand, The Black Seeds, Sam Stewart, NZMusicLive, Reggae, Recordings">
+
+    <title>The Black Seeds | Home</title>
+
+	<!--External Links to Files-->
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="js/popup-newsletter.js"></script>
+    <script src="./js/bpen.drawer.js"></script>
+	
+	<!--In HTML Script for Mobile Menu-->
+	<script>
+	
+		var drawer;
+			window.addEventListener("load", function(){
+				drawer = bpen.drawer("main-menu",
+					{
+						Items : [
+							{Text : "Home",Url : "./index.html"},
+							{Text: "The Black Seeds",Url : "./the-black-seeds.html"},
+							{Text : "About Us",Url : "./about-us.html"},
+							{Text : "Blog",Url : "./blog.html"},
+							{Text : "Recordings",Url : "./recordings.html"},
+						],
+						Anchor : 'right'
+					}
+				);
+			},false);
+
+    </script>
+	
+</head>
+
+<body>
+
+<!--Small Screen Navigation Container-->
+<div id="main-menu"></div>
+
+<!--White Body Container-->
+<div id="body-container">
+
+    <header>
+		
+		<!--Black Seeds Title - For all page sizes-->
+        <img id="title-small" src="images/small-header.png" alt="The Black Seeds">
+		<img id="title-large1" src="images/large-header1.png" alt="The Black Seeds">
+		<img id="title-large2" src="images/large-header2.png" alt="The Black Seeds">
+		
+		<!--Newsletter Button for Popup-->
+		<button id="newsletter-button" onclick="openForm()">Join Our Newsletter</button>
+
+		<img id="header-background" src="images/concert.jpg" alt="Band Concert">
+				
+		<!--Hidden Newsletter Form Popup-->
+		<div class="newsletter-popup" id="newsletter">
+		 
+			<form action="/placeholder.php" id="newsletter-container">
+				<label for="emailid"> Email </label>
+				<input type="text" placeholder="example@gmail.com" name="email" id="emailid" required>
+
+				<button type="submit" class="button">Join</button>
+				<button type="submit" class="button cancel" onclick="closeForm()">Close</button>
+			</form>
+			
+		</div> 
+		
+    </header>
+		
+	<!--Nav Menu for Larger Screens-->
+    <nav id="menu">
+
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="the-black-seeds.html">The Black Seeds</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>   
+            <li><a href="recordings.html">Recordings</a></li>
+        </ul>
+		
+    </nav>
+    
+    <main>
+		
+		<!--Main Grid-->
+		<h1>Brand New Album 'Fabric' Out Now</h1>
+			
+		<div id="content">
+            <p>We&apos;re so stoked to finally release our 6th studio album to the world!<span class="title"> Fabric.</span></p>
+			<p>It&apos;s been a long road to get to this point but we&apos;re stoked with this record and we hope you love it too.</p>
+			<p>We want to say the biggest, most heartfelt thank you to all of our fans and to everyone that has supported us or been on our journey over the years. We love you guys. We love making music. We&apos;ve always aspired to make music that lifts peoples spirits, cuts through some the negativity in the world (or in our thoughts), and that makes people think consciously about the world around us.</p>
+		</div>
+		
+		<div id="large-image">
+			<img src="images/fabric.jpg" alt="Fabric Album Cover">
+            <p class="caption">New Album Artwork</p>
+        </div>
+		
+    </main>
+
+	<!--Footer Links-->
+    <footer>
+	
+        <ul>
+            <li><a href="contact-us.html">Contact Us </a></li>
+            <li><a href="temp.html">&copy; Copyright Sam Stewart from NZMusicLive</a></li>
+            <li><a href="temp.html">Website Created by Alice Roberts</a></li>
+            <li><a href="mailto:hannahaliceroberts@gmail.com">hannahaliceroberts@gmail.com</a></li>
+        </ul>
+		
+    </footer>
+
+</div>
+</body>
+</html>

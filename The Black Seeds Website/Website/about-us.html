@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="The Black Seeds fan website owned by Sam Stewart, trying to premote New Zealand Bands.">
+	<meta name="keywords" content="New Zealand, The Black Seeds, Sam Stewart, NZMusicLive, Reggae, Recordings">
+
+    <title>The Black Seeds | About Us</title>
+
+	<link rel="stylesheet" href="stylesheet.css">
+	
+	<script src="js/popup-newsletter.js"></script>
+    <script src="./js/bpen.drawer.js"></script>
+	<script>
+	
+		var drawer;
+			window.addEventListener("load", function(){
+				drawer = bpen.drawer("main-menu",
+					{
+						Items : [
+							{Text : "Home",Url : "./index.html"},
+							{Text: "The Black Seeds",Url : "./the-black-seeds.html"},
+							{Text : "About Us",Url : "./about-us.html"},
+							{Text : "Blog",Url : "./blog.html"},
+							{Text : "Recordings",Url : "./recordings.html"},
+						],
+						Anchor : 'right'
+					}
+				);
+			},false);
+
+    </script>
+	
+</head>
+  
+<body>
+
+<div id="main-menu"></div>
+
+<div id="body-container">
+
+    <header>
+	
+        <img id="title-small" src="images/small-header.png" alt="The Black Seeds">
+		<img id="title-large1" src="images/large-header1.png" alt="The Black Seeds">
+		<img id="title-large2" src="images/large-header2.png" alt="The Black Seeds">
+		
+		<button id="newsletter-button" onclick="openForm()">Join Our Newsletter</button>
+		
+		<img id="header-background" src="images/concert.jpg" alt="Band Concert">
+		
+		<div class="newsletter-popup" id="newsletter">
+		 
+			<form action="/placeholder.php" id="newsletter-container">
+				<label for="emailid"> Email </label>
+				<input type="text" placeholder="example@gmail.com" name="email" id="emailid" required>
+
+				<button type="submit" class="button">Join</button>
+				<button type="submit" class="button cancel" onclick="closeForm()">Close</button>
+			</form>
+			
+		</div> 
+		
+    </header>
+	
+    <nav id="menu">
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="the-black-seeds.html">The Black Seeds</a></li>
+            <li><a href="about-us.html" class="active">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>   
+            <li><a href="recordings.html">Recordings</a></li>
+        </ul>
+		
+    </nav>
+    
+    <main>
+
+		<h1>NZMusicLive - Who We Are</h1>
+			
+		<div id="content">
+			<p>Sam Stewart started collecting recordings of live performances by New Zealand bands and musicians when she was a schoolgirl. She had a music teacher at school who regularly played NZ music records to introduce the pupils to local music. The teacher would talk passionately about the different pieces of music. She showed the pupils how NZ music had developed and diversified over time. Sam was hooked. She started to look around for recordings to collect for herself. She also bought a professional-quality Sony tape recorder with money she earnt delivering supermarket pamphlets and used it record some live performances herself. Slowly, but steadily, her collection grew.</p>
+			<p>In 1999 Sam decided to make collecting live recordings of NZ music her main focus. She established her company, NZ Music Live, and has been devoting more time to collecting recordings ever since. She still goes out and records live performances herself, when the musicians give her permission. Currently, she has thousands of recordings, including many that are considered to be significant. The idea came to her that it would be wonderful to be able to share her recordings with people from around the world, so she has started this website, which showcases the music she has collected.</p>
+		</div>
+
+    </main>
+
+    <footer>
+	
+        <ul>
+            <li><a href="contact-us.html">Contact Us </a></li>
+            <li><a href="temp.html">&copy; Copyright Sam Stewart from NZMusicLive</a></li>
+            <li><a href="temp.html">Website Created by Alice Roberts</a></li>
+            <li><a href="mailto:hannahaliceroberts@gmail.com">hannahaliceroberts@gmail.com</a></li>
+        </ul>
+		
+    </footer>
+
+</div>
+</body>
+</html>

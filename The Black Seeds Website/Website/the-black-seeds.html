@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta name="description" content="The Black Seeds fan website owned by Sam Stewart, trying to premote New Zealand Bands.">
+	<meta name="keywords" content="New Zealand, The Black Seeds, Sam Stewart, NZMusicLive, Reggae, Recordings">
+   
+	<title>The Black Seeds | Get to Know The Airtist</title>
+	
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="js/popup-newsletter.js"></script>
+    <script src="./js/bpen.drawer.js"></script>
+
+    <script>
+	
+		var drawer;
+			window.addEventListener("load", function(){
+				drawer = bpen.drawer("main-menu",
+					{
+						Items : [
+							{Text : "Home",Url : "./index.html"},
+							{Text: "The Black Seeds",Url : "./the-black-seeds.html"},
+							{Text : "About Us",Url : "./about-us.html"},
+							{Text : "Blog",Url : "./blog.html"},
+							{Text : "Recordings",Url : "./recordings.html"},
+						],
+						Anchor : 'right'
+					}
+				);
+			},false);
+
+    </script>
+	
+</head>
+  
+<body>
+
+<div id="main-menu"></div>
+
+<div id="body-container">
+
+    <header>
+	
+        <img id="title-small" src="images/small-header.png" alt="The Black Seeds">
+		<img id="title-large1" src="images/large-header1.png" alt="The Black Seeds">
+		<img id="title-large2" src="images/large-header2.png" alt="The Black Seeds">
+		
+		<button id="newsletter-button" onclick="openForm()">Join Our Newsletter</button>
+		
+		<img id="header-background" src="images/concert.jpg" alt="Band Concert">
+		
+		<div class="newsletter-popup" id="newsletter">
+		 
+			<form action="/placeholder.php" id="newsletter-container">
+				<label for="emailid"> Email </label>
+				<input type="text" placeholder="example@gmail.com" name="email" id="emailid" required>
+
+				<button type="submit" class="button">Join</button>
+				<button type="submit" class="button cancel" onclick="closeForm()">Close</button>
+			</form>
+			
+		</div> 
+		
+    </header>
+	
+    <nav id="menu">
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="the-black-seeds.html" class="active">The Black Seeds</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>   
+            <li><a href="recordings.html">Recordings</a></li>
+        </ul>
+		
+    </nav>
+    
+    <main>
+
+		<h1>The Black Seeds - Reggae Powerhouse</h1>
+		
+        <div id="large-image">
+            <img src="images/members.jpg" alt="Fabric Album Cover">
+            <p class="caption">Band Mambers</p>
+        </div>
+		
+		<div id="content">
+            <p>The Black Seeds are a musical group rooted in reggae from Wellington, New Zealand. Their rocksteady-influenced song <span class="title">One By One</span> became an international hit when it was played in top ranked TV series Breaking Bad. Their music is a boundary-crossing sound fusion of big-beat funk, dub, afro music, pop, rock and soul – and a large or small touch of original roots reggae (like it was played 1972-1985) or ragga is almost always present regardless musical style.</p>
+		</div>
+		
+		<div id="aside">
+			<p>Formed in 1998, The Black Seeds perform with eight members, with instruments including vocals, guitar, saxophone, trumpet, bass, drums, bongos, keyboard and wood block. Black Seeds first album, <span class="title">Keep on Pushing</span>, was released 2001 when the band already had established themselves as a strong live act. Already very successful in New Zealand and popular in Australia, Europe and North & South America, their third album <span class="title">Into the Dojo</span> (2007) introduced Black Seeds to the rest of the world. They have released five albums, a live album, and two remix albums. They have two double-platinum selling albums in New Zealand, and successful European album releases through the German-based Sonar Kollektiv label. In 2011 Black Seeds was described by Rolling Stone as &quot;The Best Reggae band in the world right now&quot;</p>
+		</div>
+		
+    </main>
+
+    <footer>
+	
+        <ul>
+            <li><a href="temp.html">Contact Us </a></li>
+            <li><a href="temp.html">&copy; Copyright Sam Stewart from NZMusicLive</a></li>
+            <li><a href="temp.html">Website Created by Alice Roberts</a></li>
+            <li><a href="mailto:hannahaliceroberts@gmail.com">hannahaliceroberts@gmail.com</a></li>
+        </ul>
+		
+    </footer>
+
+</div>
+</body>
+</html>

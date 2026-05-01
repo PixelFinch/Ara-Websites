@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="The Black Seeds fan website owned by Sam Stewart, trying to premote New Zealand Bands.">
+	<meta name="keywords" content="New Zealand, The Black Seeds, Sam Stewart, NZMusicLive, Reggae, Recordings">
+
+    <title>The Black Seeds | Blog</title>
+
+	<link rel="stylesheet" href="stylesheet.css">
+	
+	<script src="js/popup-newsletter.js"></script>
+    <script src="./js/bpen.drawer.js"></script>
+
+	<script>
+	
+		var drawer;
+			window.addEventListener("load", function(){
+				drawer = bpen.drawer("main-menu",
+					{
+						Items : [
+							{Text : "Home",Url : "./index.html"},
+							{Text: "The Black Seeds",Url : "./the-black-seeds.html"},
+							{Text : "About Us",Url : "./about-us.html"},
+							{Text : "Blog",Url : "./blog.html"},
+							{Text : "Recordings",Url : "./recordings.html"},
+						],
+						Anchor : 'right'
+					}
+				);
+			},false);
+
+    </script>
+	
+</head>
+  
+<body>
+
+<div id="main-menu"></div>
+
+<div id="body-container">
+
+    <header>
+
+        <img id="title-small" src="images/small-header.png" alt="The Black Seeds">
+		<img id="title-large1" src="images/large-header1.png" alt="The Black Seeds">
+		<img id="title-large2" src="images/large-header2.png" alt="The Black Seeds">
+		
+		<button id="newsletter-button" onclick="openForm()">Join Our Newsletter</button>
+		
+		<img id="header-background" src="images/concert.jpg" alt="Band Concert">
+		
+		<div class="newsletter-popup" id="newsletter">
+		 
+			<form action="/placeholder.php" id="newsletter-container">
+				<label for="emailid"> Email </label>
+				<input type="text" placeholder="example@gmail.com" name="email" id="emailid" required>
+
+				<button type="submit" class="button">Join</button>
+				<button type="submit" class="button cancel" onclick="closeForm()">Close</button>
+			</form>
+			
+		</div> 
+		
+    </header>
+
+    <nav id="menu">
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="the-black-seeds.html">The Black Seeds</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>   
+            <li><a href="recordings.html">Recordings</a></li>
+        </ul>
+		
+    </nav>
+    
+    <main>
+		
+		<!--Blog Post Container-->
+		<div class="blog-post">
+		
+			<h2>New Single Out Now!</h2>
+			
+			<p>January 8, 2018</p>
+			
+			<div class="blog-video">
+			
+				<div>
+					<p>There&apos;s the brand new lyric video for <span class="title">Everybody Knows</span>, the new single off our latest album <span class="title">Fabric</span>.</p>
+					<p>The video was shot around our beautiful hometown, Wellington NZ, on a good day.</p>
+					<p>Enjoy!</p>
+				</div>
+
+				<video width="640" height="480" controls>
+					<source src="video/pure-new-zealand.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video> 
+				
+			</div>
+			
+		</div>
+			
+		<div class="blog-post">
+		
+			<h2>U.S / Canadian June 17 Tour Announced!</h2>
+			
+			<p>July 22, 2017</p>
+			
+			<div class="blog-content">
+			
+				<div>
+					<p>We&apos;re super excited to announce a run of West Coast U.S & Canadian shows in June! Tickets are now onsale.</p>
+
+					<p>6/13 | SEATTLE, WA , NECTAR  &ndash; <a href="https://www.eventbrite.com/e/the-black-seeds-with-sol-seed-tickets-32172743542">GET TICKETS</a></p>
+					<p>6/14 | WHISTLER, BC, GARFINKEL&apos;S &ndash; <a href="https://www.ticketweb.ca/event/the-black-seeds-whistler-show-the-black-seeds-garfinkels-whistler-tickets/7236495?pl=skasociety&pl=skasociety&edpPlParam=%3Fpl%3Dskasociety">GET TICKETS</a></p>
+					<p>1/15 | CUMBERLAND BC, WAVERLEY HOTEL &ndash; <a href="https://www.ticketweb.ca/event/the-black-seeds-back-eddy-the-procrastinators-cumberland-bc-show-the-black-seeds-back-eddy-the-procrastinators-the-waverley-hotel-tickets/7236475?pl=skasociety&pl=skasociety&edpPlParam=%3Fpl%3Dskasociety">GET TICKETS</a></p>
+				</div>
+				
+				<div class="small-image">
+					<img src="images/tour.jpg" alt="Poster">
+					<p class="caption">Poster</p>
+				</div>
+			
+			</div>
+			
+		</div>
+		
+		<div class="blog-post">
+		
+			<h2>New Albumn Announced!</h2>
+			
+			<p>June 13, 2017</p>
+			
+			<div class="blog-content">
+			
+				<div>
+					<p>Very excited to announce that our new album <span class="title">Fabric</span> will be released worldwide on 8th September, 2017. It&apos;s our first album in over 5 years and we can&apos;t wait for you to hear it!</p>
+					<p>Pre-orders are now available, including limited edition album packages via our official store.</p>
+				</div>
+				
+				<div class="small-image">
+					<img src="images/new-albumn-ann.jpg" alt="Fabric Album Cover">
+					<p class="caption"><a href="http://smarturl.it/ni4hnm">Official Store</a></p>
+				</div>
+			
+			</div>
+			
+		</div>
+
+    </main>
+
+    <footer>
+	
+        <ul>
+            <li><a href="contact-us.html">Contact Us </a></li>
+            <li><a href="temp.html">&copy; Copyright Sam Stewart from NZMusicLive</a></li>
+            <li><a href="temp.html">Website Created by Alice Roberts</a></li>
+            <li><a href="mailto:hannahaliceroberts@gmail.com">hannahaliceroberts@gmail.com</a></li>
+        </ul>
+		
+    </footer>
+
+</div>
+</body>
+</html>
